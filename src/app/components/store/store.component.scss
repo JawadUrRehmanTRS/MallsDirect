@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+.search{
+    margin-right: 50px;
+    width: 250px;
+    border: $primary-color;
+}
+.store-nav{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.nav-item{
+  padding-top: 15px;
+}
+.btn-warning{
+    color: white;
+}
+.btn-xs {
+    padding: .50rem .4rem;
+    font-size: .875rem;
+    line-height: .5;
+    margin:2px
+  }
+  .nav-link.active{
+    background-color: $primary-color;
+  }
+
+  
+  .nav-link{
+      color: $primary-color;
+        font-weight: bold;
+  }

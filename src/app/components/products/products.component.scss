@@ -1,0 +1,89 @@
+@import "../../variables.scss";
+
+.top-image img{
+    height:230px;
+    width:100%
+}
+.font-size{
+    font-size: 30px;
+    border-style: dashed;
+}
+.flex{
+    display: flex;
+}
+#image{
+    height:75px;
+    width: 75px;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.nav-link{
+    margin-left:2px ;
+    border-color: honeydew;
+    background-color: grey;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+.nav-item>.active{
+    color: $primary-color;
+    background-color: transparent;
+    border-bottom: 2px solid $primary-color;
+}
+.btn-create {
+    height: 50px;
+    font-weight: bold;
+    width: 120px;
+    font-size: small;
+}
+.text-color{
+    color:$primary-color
+}
+
+.btn-color{
+    border-color: $primary-color;
+    background-color: $primary-color;
+    color: white;
+}
+ 
+.btn-spread{
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 35px;
+     
+}
+.btn-lg{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 45px;
+    height: 45px;
+    width: 170px; 
+}
+.toggle{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

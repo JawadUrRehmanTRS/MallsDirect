@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+.footer{
+    color:white;
+    margin-top:25px; 
+    background-color: $footer-color;
+}
+.row{
+    margin: 0px;
+    padding: 40px 60px 0px;
+   }
+.img-responsive{
+    height: 50px;
+    display: block;
+    width: 120px;
+}
+.img-responsive-apple{
+    margin-left: 10px;
+    height: 35px;
+    display: block;
+    width: 100px;
+}
+.footer ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.social-media a{
+    padding-left: 25px;
+}
+.footer-bottom{
+    height: 70px;
+    margin-top: 20px;
+    background-color:$footer-bottom-color;
+    color: white;
+}
+.footer-bottom>.row{
+    padding-top: 30px;
+    padding-right: 0px;
+}
+

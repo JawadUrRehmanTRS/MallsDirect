@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.nav-item{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.navbar li a{
+    color: $primary-color;    
+}
+.navbar-brand{
+    color: $primary-color;  
+}
+.navbar-toggler-icon{
+    border: black; 
+}
+.buton{
+    margin-top: 5px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid $primary-color;
+    
+}
+.pre-scrollable {
+    height: auto;
+    max-height: 300px;
+}
+
+.dropdown-item{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.fa{
+    padding-right: 3px;
+}
+.icon{
+    margin-bottom: 3px;
+    padding: 10px;
+    color: $primary-color;
+}
+.border-bottom{
+    border-bottom: 1px solid #e5e5e5;
+  }

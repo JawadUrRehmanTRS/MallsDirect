@@ -1,0 +1,242 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="dateOfBirth">Date of birth</label>
+          <div class="input-group">
+            <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-9 p-0">
+            <div class="top-image">
+                <img class="img-responsive" src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg">
+            </div>
+            <div class="input-title p-1  ">
+                <input type="text" class="form-control mt-3 mb-2 p-3 font-weight-normal font-size text-color"  value="Schlittz & Giggles - 3rd Street">
+            </div>
+            <div class="row p-1">
+                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
+                    <div class="card">
+                        <h5 class="card-header text-right bg_primary ">
+                            <a href="#" (click) = "sweetToast()"><i class="fa fa-trash color_primary ml-2 " aria-hidden="true"></i></a>
+                            <a href="#" (click)="open(content)"><i class=" fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
+                        </h5>
+                        <div class="card-body text-left">
+                          <h5 class="card-title color_primary">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
+                    <div class="card">
+                        <h5 class="card-header text-right ">
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary " aria-hidden="true"></i></a>
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
+                        </h5>
+                        <div class="card-body">
+                          <h5 class="card-title color_primary">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                    <div class="card">
+                        <h5 class="card-header">
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary " aria-hidden="true"></i></a>
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
+                        </h5>
+                        <div class="card-body">
+                          <h5 class="card-title color_primary">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                    <div class="card">
+                        <h5 class="card-header">
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
+                        </h5>
+                        <div class="card-body">
+                          <h5 class="card-title color_primary">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                    <div class="card">
+                        <h5 class="card-header">
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary " aria-hidden="true"></i></a>
+                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
+                        </h5>
+                        <div class="card-body">
+                          <h5 class="card-title color_primary">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="m-2 p-1">
+            <div class="m-3 form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+            </div>
+            <hr>
+            <section class="p-1">
+                <div>
+                    <ul class="nav nav-pills border-bottom">
+                        <li class="nav-item ">
+                          <a class="nav-link active bg_primary" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link color_primary" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link color_primary" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1 class="ml-2 font-weight-bold">Products</h1>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-9">
+                        <div class="flex" >
+                            <div>
+                                <img  id="image" src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg">
+                            </div>
+                            <div>
+                                <h4 class="m-3 font-weight-bold">Startes</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="align-center">
+                            <button class="btn-spread">Spreadsheet editor mode</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
+                        <div class="card">
+                            <h5 class="card-header text-right ">
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash ml-2 color_primary" aria-hidden="true"></i></a>
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class=" fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                            </h5>
+                            <div class="card-body">
+                              <h5 class="card-title color_primary">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
+                        <div class="card">
+                            <h5 class="card-header text-right ">
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary " aria-hidden="true"></i></a>
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                            </h5>
+                            <div class="card-body">
+                              <h5 class="card-title color_primary">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                        <div class="card">
+                            <h5 class="card-header">
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                            </h5>
+                            <div class="card-body">
+                              <h5 class="card-title color_primary">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                        <div class="card">
+                            <h5 class="card-header">
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                            </h5>
+                            <div class="card-body">
+                              <h5 class="card-title color_primary">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                        <div class="card">
+                            <h5 class="card-header">
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                            </h5>
+                            <div class="card-body">
+                              <h5 class="card-title color_primary">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-3 border-top border-left">
+            <div class="sidebar sticky-top">
+                <div class="toggle m-3">
+                    Status
+                   <ui-switch ></ui-switch>
+                </div>
+                    <div >
+                        <ul>
+                            <li class="border-bottom m-2"><i class=" fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                            <li class="border-bottom m-2"><i class="fa fa-info-circle  mr-2" aria-hidden="true"></i>hello</li>
+                        </ul>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <button type="button" class="btn btn-create btn-color">Create Order</button>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <button type="button" class="btn btn-lg btn-warning">Help!</button>
+                    </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="border-bottom">
+<nav class="navbar navbar-light navbar-expand-lg ">
+    <a class="navbar-brand" href="#">MallsDirect</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active" [routerLinkActive]="['active']">
+          <a class="nav-link" ><i class="fa fa-home" aria-hidden="true"></i>HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- DropDown -->
+        <li class="nav-item dropdown ">
+            <a class="nav-link buton dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MORE</a>
+            <div class=" pre-scrollable dropdown-menu dropdown-menu-right scrollable-men">
+              <a class="dropdown-item" [routerLink]="['/store']">Store</a>
+              <a class="dropdown-item" [routerLink]="['/product']">Products</a>
+              <a class="dropdown-item" [routerLink]="['/business']">Business</a>
+              <a class="dropdown-item" href="#">Errand Services</a>
+              <a class="dropdown-item" href="#">Events</a>
+              <a class="dropdown-item" href="#">Meal Delivery Services</a>
+              <a class="dropdown-item" href="#">Notification</a>
+              <a class="dropdown-item" href="#">Pick-up</a>
+              <a class="dropdown-item" href="#">Privacy Policy</a>
+              <a class="dropdown-item" href="#">Retails</a>
+            </div>
+          </li>
+        
+        <li class="nav-item" [routerLinkActive]="['active']"> 
+            <a class="nav-link" href="#" ><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']"> 
+            <a class="nav-link" href="#" ><i class="fa fa-user-plus" aria-hidden="true"></i>SIGN UP</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']"> 
+            <a class="nav-link buton icon" href="#" ><i class="fa fa-shopping-bag fa-lg" aria-hidden="true"> 0 </i></a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link buton dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+            <div class="dropdown-menu pre-scrollable dropdown-menu-right">
+              <a class="dropdown-item" href="#">ENGLISH</a>
+              <a class="dropdown-item" href="#">SPANISH</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </nav>
+</div>
