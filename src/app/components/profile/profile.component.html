@@ -1,0 +1,206 @@
+
+<ng-template #content let-modal >
+<div >
+  <div class="modal-header">
+    <div>
+      <div><h4 class="color_primary">Add Card</h4></div>   
+    </div>
+    <a (click)="modal.dismiss('Cross click')"><i class="fa fa-times color_primary" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>  
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label class="font-weight-bold">Please Enter Credit Card Number</label>
+        <input type="password" class="form-control pl-4"  name="password" placeholder="1234 1234 1234 1234">
+    </div>
+    <div class="row">
+      <div class="col-sm-6 pr-0">
+        <div class="form-group">
+          <label class="font-weight-bold">Expiry Date</label>
+          <input type="text" class="form-control pl-4"  name="password" placeholder="MM/YY">
+      </div>
+      </div>
+      <div class="col-sm-6 pl-0">
+        <div class="form-group">
+          <label class="font-weight-bold">CVC</label>
+          <input type="text" class="form-control pl-4"  name="password" placeholder="CVC">
+      </div>
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <button type="submit" (click)="modal.close('ok')" class="form-control w-50 btn btnBasic ">ok</button>
+  </div>
+    </form>
+  </div>
+</ng-template>
+
+
+
+<div class="container-fluid mt-3 col-10 border pt-4 mb-5">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li class="mr-auto" [ngbNavItem]="1">
+      <a ngbNavLink>Update Profile</a>
+      <ng-template ngbNavContent>
+        <div class="mt-4">
+          <div class="profile-image">
+            <img class="w-100 h-100" src="https://cache.pakistantoday.com.pk/JF-17-Thunder-1.jpg">
+          </div>
+          <div>
+            <form>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Name</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="text" class="form-control pl-4 " name="name">
+                </div>
+              </div>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Last name</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="text" class="form-control pl-4 " name="lastName">
+                </div>
+              </div>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Neighborhood name</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="text" class="form-control pl-4 " name="neighborhood">
+                </div>
+              </div>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Email</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="email" class="form-control pl-4 " name="email">
+                </div>
+              </div>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Password</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="password" class="form-control pl-4 " name="password">
+                </div>
+              </div>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Phone / Mobile</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="text" class="form-control pl-4 " name="phone">
+                </div>
+              </div>
+              <div class="d-flex" >
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Full Address</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <input type="text" class="form-control pl-4 " name="address">
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="col-3 text-right">
+                  <label class="font-weight-bold mt-2 ">Special address instructions (between streets, apartment number, etc)</label>
+                </div>
+                <div class="col-8 mb-2">
+                  <textarea class="form-control pl-4" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btnBasic btnUpdate">UPDATE</button>
+              </div>
+        
+            </form>
+          </div>
+        </div>
+      </ng-template>
+    </li>
+    <li class="mr-auto" [ngbNavItem]="2">
+      <a ngbNavLink>My Orders</a>
+      <ng-template ngbNavContent>
+        <div class="container-fluid">
+          <div class="row border-bottom" *ngFor="let msg of msgs">
+            <div class="col-3 pt-2">
+              <div class="order-image mt-2">
+                <img class="w-100 h-100" src="https://cache.pakistantoday.com.pk/JF-17-Thunder-1.jpg">
+              </div>
+            </div>
+            <div class="col-9 ">
+              <div class="row ">
+                <div class="col-6 pt-2 ">
+                  <strong>561. Pizza Byrōnz (Meals Delivery)</strong>
+                  <div class="mt-1">2020/12/15 11:00 AM</div>
+                  <a href="www.google.com">View Order</a>
+                </div>
+                <div class="col-6 pt-2 text-center">
+                  <div>Completed</div>
+                  <div><button class="btn btnBasic btnOrder text-center">Recorder</button></div>
+                  <div><button class="btn btnBasic btnOrder">Review Now</button></div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
+        </div>
+      </ng-template>
+    </li>
+    <li class="mr-auto" [ngbNavItem]="3">
+      <a ngbNavLink>My Save Cards</a>
+      <ng-template ngbNavContent>
+        <div class="container-fluid mt-5">
+          <div>
+          <table class="table table-bordered">
+            <thead class="bg-light text-dark">
+              <tr class="text-center">
+                <th class=" font-weight-bold" scope="col">#</th>
+                <th class=" font-weight-bold" scope="col">Card No.</th>
+                <th scope="col">Type</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td>1</td>
+                <td>XXXX-XXXX-XXXX-5371</td>
+                <td>Visa</td>
+                <td><a href="https://www.google.com/">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="col-8 mr-auto ml-auto mb-5">
+            <button type="submit" class="btn btnBasic w-100" (click)="open(content)">Add New Payment Card</button>
+          </div>
+        </div>
+        
+      </ng-template>
+    </li>
+    <li class="mr-auto" [ngbNavItem]="4">
+      <a ngbNavLink>Api Keys</a>
+      <ng-template ngbNavContent>
+       <div class="mb-5 mt-5">
+          <div class="d-flex">
+              <div class="col-11">
+                <input type="text" class="w-100 pl-2" readonly
+                value="jkj121kjlkj!!kjkljlkj-hdskjhfkj/dhjkdhsfkjhds-jsdfhoueo97">
+              </div>
+              <div class="col-1 mr-2"><a><i class="fa fa-trash pt-2 " aria-hidden="true"></i></a></div>
+          </div>
+          <div class="float-right mr-5 mt-3">
+            <a class="color_priamry"><i class="fa fa-plus-circle mr-1" aria-hidden="true"></i>Add</a>
+          </div>
+       </div>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>

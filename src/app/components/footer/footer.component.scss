@@ -25,8 +25,11 @@
     padding: 0px;
     margin: 0px;
 }
-.social-media a{
+.social-media>a{
     padding-left: 25px;
+}
+.social-media{
+    padding-left: 350px;
 }
 .footer-bottom{
     height: 70px;
@@ -39,3 +42,7 @@
     padding-right: 0px;
 }
 
+i{
+    color: white;
+    transform: scale(1.5);
+}

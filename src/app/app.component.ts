@@ -21,10 +21,7 @@ export class AppComponent {
         this.showOverlay = true;
       }
       if (event instanceof NavigationEnd) {
-        setTimeout(()=>{
           this.showOverlay = false;
-        },500)
-       
       } 
        
     })

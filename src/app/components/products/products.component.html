@@ -37,8 +37,8 @@
                 <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
                     <div class="card">
                         <h5 class="card-header text-right bg_primary ">
-                            <a href="#" (click) = "sweetToast()"><i class="fa fa-trash color_primary ml-2 " aria-hidden="true"></i></a>
-                            <a href="#" (click)="open(content)"><i class=" fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
+                            <a  (click) = "sweetToast()"><i class="fa fa-trash color_primary ml-2 " aria-hidden="true"></i></a>
+                            <a  (click)="open(content)"><i class=" fa fa-pencil-square-o color_primary ml-2" aria-hidden="true"></i></a>
                         </h5>
                         <div class="card-body text-left">
                           <h5 class="card-title color_primary">Special title treatment</h5>
@@ -107,106 +107,139 @@
             </div>
             <hr>
             <section class="p-1">
-                <div>
-                    <ul class="nav nav-pills border-bottom">
-                        <li class="nav-item ">
-                          <a class="nav-link active bg_primary" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link color_primary" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link color_primary" href="#">Link</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h1 class="ml-2 font-weight-bold">Products</h1>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-9">
-                        <div class="flex" >
+                <div class="container-fluid">
+                    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                        <li [ngbNavItem]="1">
+                          <a ngbNavLink>Products</a>
+                          <ng-template ngbNavContent>
                             <div>
-                                <img  id="image" src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg">
+                                <h1 class="ml-2 font-weight-bold">Products</h1>
                             </div>
+                            <div class="row mt-5">
+                                <div class="col-9">
+                                    <div class="flex" >
+                                        <div>
+                                            <img  id="image" src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg">
+                                        </div>
+                                        <div>
+                                            <h4 class="m-3 font-weight-bold">Startes</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="align-center">
+                                        <button class="btn-spread">Spreadsheet editor mode</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
+                                    <div class="card">
+                                        <h5 class="card-header text-right ">
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash ml-2 color_primary" aria-hidden="true"></i></a>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class=" fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                                        </h5>
+                                        <div class="card-body">
+                                          <h5 class="card-title color_primary">Special title treatment</h5>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
+                                    <div class="card">
+                                        <h5 class="card-header text-right ">
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary " aria-hidden="true"></i></a>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                                        </h5>
+                                        <div class="card-body">
+                                          <h5 class="card-title color_primary">Special title treatment</h5>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                                    <div class="card">
+                                        <h5 class="card-header">
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                                        </h5>
+                                        <div class="card-body">
+                                          <h5 class="card-title color_primary">Special title treatment</h5>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                                    <div class="card">
+                                        <h5 class="card-header">
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                                        </h5>
+                                        <div class="card-body">
+                                          <h5 class="card-title color_primary">Special title treatment</h5>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
+                                    <div class="card">
+                                        <h5 class="card-header">
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
+                                            <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
+                                        </h5>
+                                        <div class="card-body">
+                                          <h5 class="card-title color_primary">Special title treatment</h5>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                          <a ngbNavLink>Manufacturers</a>
+                          <ng-template ngbNavContent>
                             <div>
-                                <h4 class="m-3 font-weight-bold">Startes</h4>
+                                <div><h1 class="font-weight-bold">Manufacturers</h1></div>
+                                <div class="flex border mt-3 ">
+                                    <div class="col-11 mt-4 mb-2 pr-1">
+                                        <input type="text" class="form-control h-75 border-dotted" placeholder="Manufacturers">
+                                    </div>
+                                    <div class="col-1 mt-4 mb-2 pl-0">
+                                        <a><i class="fa fa-plus-circle mr-1" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="align-center">
-                            <button class="btn-spread">Spreadsheet editor mode</button>
-                        </div>
-                    </div>
+                            
+                          </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                          <a ngbNavLink>Product Types</a>
+                          <ng-template ngbNavContent>
+                            <div>
+                                <div><h1 class="font-weight-bold">Product Types</h1></div>
+                                <div class="flex border mt-3 ">
+                                    <div class="col-11 mt-4 mb-2 pr-1">
+                                        <input type="text" class="form-control h-75 border-dotted" placeholder="Product Types">
+                                    </div>
+                                    <div class="col-1 mt-4 mb-2 pl-0">
+                                        <a><i class="fa fa-plus-circle mr-1" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                          </ng-template>
+                        </li>
+                      </ul>
+                      
+                      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+                      
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
-                        <div class="card">
-                            <h5 class="card-header text-right ">
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash ml-2 color_primary" aria-hidden="true"></i></a>
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class=" fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
-                            </h5>
-                            <div class="card-body">
-                              <h5 class="card-title color_primary">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0">
-                        <div class="card">
-                            <h5 class="card-header text-right ">
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary " aria-hidden="true"></i></a>
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
-                            </h5>
-                            <div class="card-body">
-                              <h5 class="card-title color_primary">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
-                        <div class="card">
-                            <h5 class="card-header">
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
-                            </h5>
-                            <div class="card-body">
-                              <h5 class="card-title color_primary">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
-                        <div class="card">
-                            <h5 class="card-header">
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
-                            </h5>
-                            <div class="card-body">
-                              <h5 class="card-title color_primary">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-lg-3  m-3 p-0 text-right">
-                        <div class="card">
-                            <h5 class="card-header">
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-trash color_primary" aria-hidden="true"></i></a>
-                                <a href="https://getbootstrap.com/docs/4.0/components/card/"><i class="fa fa-pencil-square-o ml-2 color_primary" aria-hidden="true"></i></a>
-                            </h5>
-                            <div class="card-body">
-                              <h5 class="card-title color_primary">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                             
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           
             </section>
         </div>
         <div class="col-3 border-top border-left">

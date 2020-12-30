@@ -1,0 +1,42 @@
+<div class="container-fluid ">
+    <div class="SignupForm col-lg-4 col-md-6 col-sm-12 border">
+        <div>
+            <h3 class="text-center font-weight-bold mb-2">Create Account</h3>
+        </div>
+        <div class="text-center mb-2">
+            <p class="d-inline">Already have an account?</p> <a class="ml-2 color_primary" routerLink="/login">Login</a>
+        </div>
+        <div>
+            <form (submit)="signup()" [formGroup]="signupForm">
+                <div class="alert alert-danger" role="alert" *ngIf="check">
+                    Email Already Exist
+                </div>
+                <div class="form-group">
+                    <Label class="font-weight-bold">First Name</Label>
+                    <input type="text" name="firstName" formControlName = "firstName" class="form-control pl-4" placeholder="First Name" />
+                    <small *ngIf="signupForm.get('firstName').invalid && signupForm.get('firstName').touched" >Name is required </small>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Email</label>
+                    <input type="email" class="form-control pl-4" formControlName = "email" name="email" placeholder="Email">
+                    <small *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">Please Enter Valid Email </small>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Password</label>
+                    <input type="password" class="form-control pl-4" formControlName= "password" name="password"
+                        placeholder="Password minimum length of 8 character">
+                    <small *ngIf="signupForm.get('password').touched && signupForm.get('password').invalid">Please Enter Valid Password length must be greater then 8 </small>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Confirm Password</label>
+                    <input type="password" class="form-control pl-4" (ngModelChange)= "passwordCompare()" formControlName= "confirmPassword" name="confirmPassword">
+                    <small *ngIf="confirmPasswordError">Password Not Matched </small>
+                </div>
+                <div class="form-group">
+                    <button type="submit" [disabled] = "signupForm.invalid||confirmPasswordError" class="form-control btn btnSubmit btn-success ">SignUp</button>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

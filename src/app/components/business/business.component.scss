@@ -5,14 +5,12 @@
     border-radius: 12px;
   }
   
-  .border-bottom{
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .btn-color{
-    border-color: $primary-color;
-    background-color: $primary-color;
-  }
 
+  .btn-color{
+    color: white;
+  border-color: $primary-color;
+  background-color: $primary-color;
+}
   .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
     border-color: #7B1FA2;

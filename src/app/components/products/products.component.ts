@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 export class ProductsComponent implements OnInit {
   closeResult = '';
   constructor(private modalService: NgbModal) { }
-
+  active = 2;
   ngOnInit(): void {
   }
  sweetToast(){

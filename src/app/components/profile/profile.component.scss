@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+
+.profile-form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+.border-bottom{
+    border-bottom: 1px solid #e5e5e5;
+  }
+.profile-image, .order-image{
+    margin-top: 35px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    height:120px;
+    width: 120px;
+}
+
+
+.btnBasic{
+    height: 50px;
+    color: white;
+    background-color:$primary_color ;
+    font-weight: bold;
+    border-color: $primary-color;
+}  
+
+.btnUpdate{
+    margin-left: 290px;
+    width: 110px;
+    margin-top: 15px;
+}
+.btnOrder{
+    width: 50%;
+    margin-bottom: 10px;
+}
+a{
+    font-weight: bold;
+    color: $primary-color;
+}
+i:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+li>a.active{
+    background-color: white;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
+    border-radius: 0;
+}

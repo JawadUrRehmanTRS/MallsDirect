@@ -37,9 +37,10 @@ ul{
 .nav-link{
     margin-left:2px ;
     border-color: honeydew;
-    background-color: grey;
+    background-color: lightgray;
     color: $primary-color;
     font-weight: bold;
+    border-radius: 0;
 }
 
 .nav-item>.active{
@@ -86,4 +87,7 @@ ul{
     text-align: center;
     margin-bottom: 15px;
     font-weight: bold;
+}
+.border-dotted{
+    border-style: dotted;
 }
