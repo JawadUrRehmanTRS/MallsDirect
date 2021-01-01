@@ -1,13 +1,12 @@
 @import "../../variables.scss";
 .footer{
-    color:white;
-    margin-top:25px; 
+    color:white; 
     background-color: $footer-color;
 }
 .row{
     margin: 0px;
     padding: 40px 60px 0px;
-   }
+}
 .img-responsive{
     height: 50px;
     display: block;

@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BusinessComponent } from './components/business/business.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { CardsComponent } from './components/shared/cards/cards.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { StoreComponent } from './components/store/store.component';
- 
+
 
 const routes: Routes = [
   {path: "", redirectTo:'store', pathMatch:'full' },
@@ -19,7 +21,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'resetPassword', component:ResetPasswordComponent},
   { path: 'forgetPassword', component:ForgetPasswordComponent},
-  { path: 'profile', component:ProfileComponent }
+  { path: 'profile', component:ProfileComponent },
+  { path: 'card', component:CardsComponent},
+  { path: 'dashboard', component:DashboardComponent}
   
 ];
 
